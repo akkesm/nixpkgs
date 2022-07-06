@@ -27,7 +27,7 @@ stdenv.mkDerivation rec {
 
   meta = {
     description = "Multi-purpose WAVE data processing and reporting utility";
-    homepage = "http://www.etree.org/shnutils/shntool/";
+    homepage = "http://shnutils.freeshell.org/shntool/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
     maintainers = with lib.maintainers; [ jcumming ];
