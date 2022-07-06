@@ -1,12 +1,16 @@
-{ appimageTools, lib, fetchurl }:
+{ lib
+, fetchurl
+, appimageTools
+}:
+
 let
   pname = "nuclear";
-  version = "0.6.6";
-  name = "${pname}-v${version}";
+  version = "9545bf";
+  name = "${pname}-${version}";
 
   src = fetchurl {
-    url = "https://github.com/nukeop/nuclear/releases/download/v${version}/${name}.AppImage";
-    sha256 = "0c1335m76fv0wfbk07s8r6ln7zbmlqd66052gqfisakl8a1aafl6";
+    url = "https://github.com/nukeop/nuclear/releases/download/${version}/${name}.AppImage";
+    sha256 = "12gq5wiw885083byyg1za8jr08p62p0j707jl2g5gnrq3fj47g8p";
   };
 
   appimageContents = appimageTools.extract { inherit name src; };
